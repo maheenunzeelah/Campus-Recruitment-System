@@ -11,6 +11,7 @@ class Signup extends Component {
     }
     handlesubmit=(e)=>{
       e.preventDefault();
+      localStorage.setItem("role",this.state.role);
       console.log(this.state);
       if(this.state.role==="Company"){
         axios.post('http://localhost:3001/signup/company',{name:this.state.name,email:this.state.email,password:this.state.password})

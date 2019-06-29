@@ -27,6 +27,15 @@ class JobList extends Component{
       })
 
     }
+    handleClick=(e)=>{
+        let id=e.target.id
+        axios.delete(`http://localhost:3001/signin/admin/jobList/${id}`)
+        .then(res=>{
+         const data=res.data;
+         alert(data);
+         window.location='http://localhost:3000/jobs'
+        })
+    }
   
 render(){
     return(
@@ -36,7 +45,10 @@ render(){
               return(
                   <div key={job._id}>
                   {job.name}&emsp;
-                  <button className="btn btn-md btn-danger"><Link to={'jobDetails/'+job._id}>View Job</Link></button>
+                  <button className="btn btn-md btn-success"><Link to={'jobDetails/'+job._id}>View Job</Link></button>
+                  {(localStorage.getItem("role")==="Admin")?
+                  <button style={{height:"59px", marginLeft:"7px",fontSize:"28px"}} id={job._id} className="btn btn-lg btn-danger"onClick={this.handleClick}>Remove Job</button>
+                 :null}
                   </div>
               )
               })}

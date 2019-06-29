@@ -41,7 +41,7 @@ class App extends Component {
   }
   handlesubmit=(e)=>{
     e.preventDefault();
-    
+    localStorage.setItem("role",this.state.role);
     if(this.state.role==="Company"){
       axios.post('http://localhost:3001/signin/company',{email:this.state.email,password:this.state.password})
       .then(res => {
@@ -88,6 +88,7 @@ class App extends Component {
  handleclick=(e)=>{
         this.setState({
           [e.target.name]:e.target.value
+          
         })
       }
   render(){

@@ -38,7 +38,9 @@ render(){
               return(
                   <div >
                   {company.name}
-                  <button id={company._id} className="btn btn-md btn-danger"onClick={this.handleClick}>Remove Company</button>
+                  {(localStorage.getItem("role")==="Admin")?
+                  <button id={company._id} className="btn btn-md btn-danger"onClick={this.handleClick}>Remove Students</button>
+                 :null}
                   </div>
               )
               })}
