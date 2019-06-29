@@ -15,7 +15,7 @@ const Admin=()=>{
      
       <li><button id="Deletedata" className="btn btn-md btn-primary"><Link to='compList'>List of Companies</Link></button></li>
       
-      <li><button id="Deletedata" className="btn btn-md btn-primary"><Link to=''>List of Jobs</Link></button></li>
+      <li><button id="Deletedata" className="btn btn-md btn-primary"><Link to='jobs'>List of Jobs</Link></button></li>
    
       <li><button id="logout" className="btn btn-md btn-warning" style={{fontSize:'30px'}} onClick={handleClick}>Log out</button></li>
       

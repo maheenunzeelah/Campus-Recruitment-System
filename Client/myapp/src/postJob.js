@@ -12,6 +12,7 @@ class PostJobs extends Component{
        
    }
    
+   
    handlesubmit=(e)=>{
     e.preventDefault();
         axios.post('http://localhost:3001/signin/comp',{name:this.state.name,experience:this.state.experience,qualification:this.state.qualification

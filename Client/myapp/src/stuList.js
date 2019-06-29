@@ -14,7 +14,7 @@ class StuList extends Component{
             data.map((obj)=>{
             
                 let students=[...this.state.students,obj];
-                localStorage.setItem("list",JSON.stringify(students));
+              
                 this.setState({
                     students
                })
@@ -42,6 +42,7 @@ render(){
               return(
                   <div >
                   {student.name}
+                  
                   <button id={student._id} className="btn btn-md btn-danger"onClick={this.handleClick}>Remove Students</button>
                   </div>
               )

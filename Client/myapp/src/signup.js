@@ -66,6 +66,7 @@ class Signup extends Component {
     render(){
     return (
     <div className="App container">
+    <center><h1 style={{fontSize:'45px', margin:'15px', color:'#e0a800'}}>Campus Recruitment System</h1></center>
       <center><h1>Signup Form</h1></center>
       <form onSubmit={this.handlesubmit}>
       <div className="form-group">

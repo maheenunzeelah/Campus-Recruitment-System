@@ -9,6 +9,9 @@ import Company from './company';
 import PostJobs from './postJob';
 import Admin from './admin';
 import StuList from './stuList';
+import JobList from './jobs';
+import JobDetail from './jobDetails';
+import ViewJob from './viewJob';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
 
@@ -21,6 +24,9 @@ ReactDOM.render(<BrowserRouter>
                  <Route path='/admin' component={Admin} />
                  <Route path='/compList' component={CompList} />
                  <Route path='/stuList' component={StuList} />
+                 <Route path='/jobs' component={JobList} />
+                 <Route path='/viewJob' component={ViewJob}/>
+                 <Route path='/jobDetails/:id' component={JobDetail} />
                  </BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
